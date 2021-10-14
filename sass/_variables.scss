@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+$Sparta: "Spartan", sans-serif;
+
+// PALETA DE COLORES
+
+$Dark-Magenta: hsl(300, 43%, 22%);
+$Pink: hsl(333, 80%, 67%);
+$Grayish-Magenta: hsl(303, 10%, 53%);
+$Light-Magenta: hsl(300, 24%, 96%);
+$Rank: #f7f2f8;
+
+@mixin Card($margin) {
+  background-color: $Dark-Magenta;
+  padding: 35px 30px 50px 30px;
+  width: 31.5%;
+  border-radius: 10px;
+  color: #fff;
+
+  .header {
+    font-size: 13px;
+    display: flex;
+    align-items: flex-end;
+      
+    .txt{
+        margin-top: none !important;
+        margin-left: 25px;
+        p {
+            color: #ee68a475;
+       
+       
+          } 
+    }
+
+
+  }
+
+  img {
+    border-radius: 50%;
+    width: 45px;
+  }
+
+  .txt {
+    margin-top: 25px;
+    font-size: 12px;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  @if $margin == up{
+    margin-top: 40px;
+  }
+
+  @else if $margin == down{
+    margin-top: 60px;
+  }
+
+  @else {
+    margin-top: 0;
+  }
+
+  @media screen and (max-width:1000px) {
+    margin: auto;
+    width: 500px;
+    margin-top: 20px;
+  
+  }
+
+  @media screen and (max-width:700px) {
+    
+    width: 90%;
+  
+  
+  }
+
+}
+

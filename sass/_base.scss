@@ -1,0 +1,172 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $Sparta;
+}
+
+.dp-flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.container {
+  max-width: 1100px;
+  width: 90%;
+  margin: auto;
+  height: 100vh;
+}
+
+
+.column-1 {
+  width: 50%;
+  .header {
+    max-width: 500px;
+
+    h2 {
+      font-weight: 700;
+      font-size: 42px;
+      color: $Dark-Magenta;
+      max-width: 350px;
+    }
+
+    p {
+      font-weight: 500;
+      color: $Grayish-Magenta;
+      line-height: 1.5;
+      margin-top: 10px;
+    }
+  }
+
+  .rank {
+    display: flex;
+    background-color: $Light-Magenta;
+    border-radius: 10px;
+    padding: 15px 30px;
+    margin-top: 15px;
+    align-items: center;
+ 
+    p {
+      color: $Dark-Magenta;
+      font-weight: 700;
+      display: inline-block;
+      margin-left: 30px;
+      font-size: 14px;
+    }
+    
+  }
+
+  .r-1{
+    margin-right: 110px;
+    background-color: $Light-Magenta;
+
+    p{
+      margin-right: 30px;
+    }
+    }
+
+  .r-2{
+    margin-right: 40px;
+    margin-left: 20px;
+
+    p{
+      margin-right: 30px;
+    }
+    }
+
+    .r-3{
+      margin-left: 70px;
+
+      }
+}
+
+.column-2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 60px;
+}
+
+.card {
+  @include Card(upd);
+}
+
+.card-2 {
+  @include Card(up);
+}
+
+.card-3 {
+  @include Card(down);
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    padding: 40px 0px;
+  }
+
+  .dp-flex,
+  .column-2 {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: auto;
+    width: 500px;
+  }
+
+  .column-2 {
+    margin-top: 15px;
+  }
+
+  .column-1 {
+    width: 100%;
+    text-align: center;
+
+    .rank {
+      flex-direction: column;
+      padding: 20px 30px;
+    
+      p {
+        padding-top: 10px;
+        margin-left: 0px;
+      }
+    }
+
+    h2 {
+      max-width: 100% !important;
+    }
+
+    .header {
+      width: 100%;
+      p{
+        margin: 25px 0px;
+      }
+    }
+    .r-1,.r-2,.r-3{
+      margin-right: 0px;
+      margin-left: 0px;
+     }
+  }
+
+
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    padding: 80px 0px;
+  }
+
+  .column-1 {
+    width: 90%;
+    text-align: center;
+    .r-1,
+    .r-2 {
+      margin-right: 0px;
+    }
+  }
+}
